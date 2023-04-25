@@ -27,9 +27,8 @@ namespace ClosedXML.Excel
         }
 
         internal override IEnumerable<Int32> Match(XLWorkbook.PivotTableInfo pti, IXLPivotTable pt)
-        {
-            //var values = pti.Fields[PivotField.SourceName].DistinctValues?.ToList();
-            var values = pti.Fields[PivotField.SourceName].DistinctValues.ToList();
+        {            
+            var values = pti.Fields[PivotField.SourceName].DistinctValues?.ToList();
             if (values == null)
                 return Array.Empty<Int32>();
 
